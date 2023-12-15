@@ -30,10 +30,10 @@
             //                     | CTRL  | ALT  | CMD  |  SPACE  |   BSPC   |  |   RET   |  SPACE  | RET  | BSPC  | R-ALT |
 
             bindings = <
-&mt TILDE TAB     &mt EXCLAMATION Q  &mt AT_SIGN W  &mt HASH E    &mt DOLLAR R  &mt PERCENT T                                                       &mt CARET Y       &mt AMPERSAND U    &mt ASTERISK I       &mt LEFT_PARENTHESIS O   &mt RIGHT_PARENTHESIS P  &mt NON_US_BACKSLASH PIPE
-&kp LEFT_CONTROL  &mt UNDERSCORE A   &mt EQUAL S    &mt MINUS D   &mt PLUS F    &mt GRAVE G                                                         &kp H             &kp J              &kp K                &kp L                    &mt COLON SEMICOLON      &mt DOUBLE_QUOTES SINGLE_QUOTE
-&kp LEFT_SHIFT    &kp Z              &kp X          &kp C         &kp V         &kp B          &kp ESCAPE  &mo 2  &mo 2  &kp ESC                    &mt LEFT_BRACE N  &mt RIGHT_BRACE M  &mt LESS_THAN COMMA  &mt GREATER_THAN PERIOD  &mt QUESTION SLASH       &kp RIGHT_SHIFT
-                                                    &kp LEFT_ALT  &kp LGUI      &kp SPACE      &kp BSPC    &to 1  &to 1  &kp RS(RA(RIGHT_CONTROL))  &kp RETURN        &none              &none
+&kp TAB           &kp Q  &kp W  &kp E         &kp R     &kp T                                                           &kp Y       &kp U  &kp I      &kp O       &kp P          &kp NON_US_BACKSLASH
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F     &kp G                                                           &kp H       &kp J  &kp K      &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V     &kp B      &kp ESCAPE  &mo 2  &mo 2  &kp ESC                    &kp N       &kp M  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
+                                &kp LEFT_ALT  &kp LGUI  &kp SPACE  &kp BSPC    &to 1  &to 1  &kp RS(RA(RIGHT_CONTROL))  &kp RETURN  &none  &none
             >;
         };
 
@@ -45,10 +45,10 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
 
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                                   &kp CARET                    &kp AMPERSAND                  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&kp LCTRL  &kp UNDERSCORE   &kp EQUAL    &kp MINUS  &kp PLUS    &kp GRAVE                                     &kp LEFT_ARROW               &kp DOWN_ARROW                 &kp UP_ARROW   &kp RIGHT_ARROW       &kp COLON              &kp DOUBLE_QUOTES
-&kp LSHFT  &none            &none        &none      &none       &none        &kp ESC   &mo 2  &mo 2  &kp ESC  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp LESS_THAN  &kp GREATER_THAN      &kp QUESTION           &kp NON_US_BACKSLASH
-                                         &kp LALT   &kp LGUI    &kp SPACE    &kp BSPC  &to 0  &to 0  &none    &kp ENTER                    &none                          &none
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR      &kp PERCENT                                       &kp CARET         &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&kp LCTRL  &kp UNDERSCORE   &kp EQUAL    &kp MINUS  &kp PLUS        &kp GRAVE                                         &kp LEFT_ARROW    &kp DOWN_ARROW     &kp UP_ARROW   &kp RIGHT_ARROW       &kp COLON              &kp DOUBLE_QUOTES
+&kp LSHFT  &none            &none        &none      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ESC   &mo 2  &mo 2  &kp ESC  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN  &kp GREATER_THAN      &kp QUESTION           &kp NON_US_BACKSLASH
+                                         &kp LALT   &kp LGUI        &kp SPACE        &kp BSPC  &to 0  &to 0  &none    &kp ENTER         &none              &none
             >;
         };
 
