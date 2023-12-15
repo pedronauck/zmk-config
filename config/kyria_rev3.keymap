@@ -14,6 +14,10 @@
     // chain-length = <25>; // Uncomment if using only per-key LEDs.
 };
 
+&mt {
+    tapping-term-ms = <500>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
