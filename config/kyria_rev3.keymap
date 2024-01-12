@@ -14,9 +14,7 @@
     // chain-length = <25>; // Uncomment if using only per-key LEDs.
 };
 
-&mt {
-    tapping-term-ms = <500>;
-};
+&mt { tapping-term-ms = <500>; };
 
 / {
     combos {
@@ -24,12 +22,14 @@
 
         l2-combo-left {
             bindings = <&mo 2>;
-            key-positions = <42 29>;
+            key-positions = <28 29>;
+            layers = <0 2>;
         };
 
         l2-combo-right {
             bindings = <&mo 2>;
-            key-positions = <34 47>;
+            key-positions = <34 35>;
+            layers = <0 1>;
         };
     };
 
