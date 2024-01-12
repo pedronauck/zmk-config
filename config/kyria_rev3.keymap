@@ -75,6 +75,20 @@
             bindings = <&kp SPACE &kp C &kp P>;
             label = "VIM_LCP";
         };
+
+        vim_lbd: vim_lbd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp B &kp D>;
+            label = "VIM_LBD";
+        };
+
+        vim_lbP: vim_lbP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp B &kp LS(P)>;
+            label = "VIM_LBP";
+        };
     };
 
     keymap {
@@ -129,19 +143,10 @@
 
         vim_layer {
             bindings = <
-&none  &none  &none     &none  &vim_lrw  &none                                 &none  &vim_tu  &vim_ti  &none  &vim_lcp  &none
-&none  &none  &vim_lcs  &none  &none     &vim_lgg                              &none  &none    &none    &none  &none     &none
-&none  &none  &none     &none  &none     &none     &none  &none  &none  &none  &none  &none    &none    &none  &none     &none
-                        &none  &none     &none     &none  &none  &none  &none  &none  &none    &none
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none  &vim_lbP  &vim_lbd  &none  &vim_lrw  &none                                 &none  &vim_tu  &vim_ti  &none  &vim_lcp  &none
+&none  &none     &vim_lcs  &none  &none     &vim_lgg                              &none  &none    &none    &none  &none     &none
+&none  &none     &none     &none  &none     &none     &none  &none  &none  &none  &none  &none    &none    &none  &none     &none
+                           &none  &none     &none     &none  &none  &none  &none  &none  &none    &none
             >;
         };
     };
