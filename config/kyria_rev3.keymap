@@ -128,10 +128,10 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
 
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp PERCENT                                            &kp CARET       &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&kp LCTRL  &none            &none        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ESC                                                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW       &none                  &kp PIPE
-&kp LSHFT  &none            &none        &kp MINUS         &kp EQUAL          &kp LS(LEFT_COMMAND)  &none  &none  &none  &none       &kp PAGE_DOWN   &kp PAGE_UP     &none         &none                 &none                  &kp RIGHT_SHIFT
-                                         &none             &kp LALT           &kp LEFT_SHIFT        &none  &none  &none  &kp RETURN  &none           &none           &none
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp PERCENT                                                &kp CARET       &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp LCTRL  &none            &none        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ESC                                                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW       &none                  &kp PIPE
+&kp LSHFT  &none            &none        &kp MINUS         &kp EQUAL          &kp LS(LEFT_COMMAND)  &none      &none  &none  &none       &kp PAGE_DOWN   &kp PAGE_UP     &none         &none                 &none                  &kp RIGHT_SHIFT
+                                         &none             &kp LALT           &kp LGUI              &kp LSHFT  &none  &none  &kp RETURN  &none           &none           &none
             >;
 
             sensor-bindings =
@@ -141,10 +141,10 @@
 
         number_layer {
             bindings = <
-&none             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                           &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp C_PLAY_PAUSE      &kp K_MUTE
-&kp LEFT_CONTROL  &none         &none         &none         &none         &none                                            &none         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP
-&kp LEFT_SHIFT    &none         &none         &none         &none         &none     &none      &none     &none  &none      &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
-                                              &none         &kp LALT      &kp LGUI  &kp SPACE  &kp BSPC  &none  &kp ENTER  &none         &kp N0        &none
+&none             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                             &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp C_PLAY_PAUSE      &kp K_MUTE
+&kp LEFT_CONTROL  &none         &none         &none         &none         &none                                              &none         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP
+&kp LEFT_SHIFT    &none         &none         &none         &none         &none     &none           &none  &none  &none      &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
+                                              &none         &kp LALT      &kp LGUI  &kp LEFT_SHIFT  &none  &none  &kp ENTER  &none         &kp N0        &none
             >;
         };
 
