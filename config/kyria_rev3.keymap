@@ -112,6 +112,10 @@
 &kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V     &kp B     &mo 1      &mo 3     &mo 3                      &none       &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
                                 &mo 2  &kp LALT  &kp LGUI  &kp SPACE  &kp BSPC  &kp RS(RA(RIGHT_CONTROL))  &kp RETURN  &mo 1  &mo 2  &none
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>,
+                <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         symbol_layer {
