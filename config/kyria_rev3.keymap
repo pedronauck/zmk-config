@@ -94,6 +94,13 @@
             bindings = <&kp SPACE &kp U &kp H>;
             label = "VIM_LUH";
         };
+
+        vim_lfb: vim_lfb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp F &kp B>;
+            label = "VIM_LFB";
+        };
     };
 
     keymap {
@@ -148,10 +155,10 @@
 
         vim_layer {
             bindings = <
-&none  &vim_lbP  &vim_lbd  &none  &vim_lrw  &none                                 &none     &vim_tu  &vim_ti  &none  &vim_lcp  &none
-&none  &none     &vim_lcs  &none  &none     &vim_lgg                              &vim_luh  &none    &none    &none  &none     &none
-&none  &none     &none     &none  &none     &none     &none  &none  &none  &none  &none     &none    &none    &none  &none     &none
-                           &none  &none     &none     &none  &none  &none  &none  &none     &none    &none
+&none  &vim_lbP   &vim_lbd  &none  &vim_lrw  &none                                 &vim_luh           &vim_tu            &vim_ti            &none              &vim_lcp  &none
+&none  &kp LS(S)  &vim_lcs  &none  &none     &vim_lgg                              &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))  &kp LS(LC(LA(L)))  &none     &none
+&none  &none      &none     &none  &none     &vim_lfb  &none  &none  &none  &none  &kp LS(LA(LC(N)))  &kp LS(LA(LC(M)))  &none              &none              &none     &none
+                            &none  &none     &none     &none  &none  &none  &none  &none              &none              &none
             >;
         };
 
