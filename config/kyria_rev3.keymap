@@ -113,6 +113,13 @@
             bindings = <&kp SPACE &kp C &kp R>;
             label = "VIM_LCR";
         };
+
+        vim_ltt: vim_ltt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp T &kp T>;
+            label = "VIM_LTT";
+        };
     };
 
     keymap {
@@ -167,7 +174,7 @@
 
         vim_layer {
             bindings = <
-&none  &vim_lbP   &vim_lbd  &vim_lrw  &vim_lcr  &none                                   &vim_ty            &vim_tu            &vim_ti            &none              &vim_lcp  &none
+&none  &vim_lbP   &vim_lbd  &vim_lrw  &vim_lcr  &vim_ltt                                &vim_ty            &vim_tu            &vim_ti            &none              &vim_lcp  &none
 &none  &kp LS(S)  &vim_lcs  &none     &vim_lfb  &vim_lgg                                &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))  &kp LS(LC(LA(L)))  &none     &none
 &none  &none      &none     &none     &none     &kp ESCAPE  &none  &none  &none  &none  &kp LS(LA(LC(N)))  &kp LS(LA(LC(M)))  &none              &none              &none     &none
                             &none     &none     &none       &none  &none  &none  &none  &none              &none              &none
