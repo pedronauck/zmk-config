@@ -123,6 +123,21 @@
         };
     };
 
+    behaviors {
+        ntree: number_tree_dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_3>, <&kp PERIOD>;
+            mods = <(MOD_LSFT)>;
+        };
+        ntwo: number_two_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp COMMA>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -168,7 +183,7 @@
             bindings = <
 &none             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3              &kp NUMBER_4               &kp N5                                                                    &kp NUMBER_6  &kp N7        &kp N8  &kp N9        &kp N0  &kp K_LOCK
 &kp LEFT_CONTROL  &none         &none         &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &none                                                                     &kp PERIOD    &kp NUMBER_4  &kp N5  &kp NUMBER_6  &none   &none
-&kp LEFT_SHIFT    &none         &none         &kp LG(LEFT_BRACKET)      &kp LG(RIGHT_BRACKET)      &kp ESCAPE  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_2))  &none  &none      &kp MINUS     &kp NUMBER_1  &gresc  &gresc        &none   &none
+&kp LEFT_SHIFT    &none         &none         &kp LG(LEFT_BRACKET)      &kp LG(RIGHT_BRACKET)      &kp ESCAPE  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_2))  &none  &none      &kp MINUS     &kp NUMBER_1  &ntwo   &ntree        &none   &none
                                               &none                     &kp LALT                   &kp LGUI    &kp LEFT_SHIFT        &none                 &none  &kp ENTER  &none         &none         &none
             >;
         };
