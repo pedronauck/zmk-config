@@ -177,10 +177,10 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
 
             bindings = <
-&kp GRAVE  &kp EXCLAMATION    &kp AT_SIGN           &kp HASH               &kp DOLLAR        &kp PERCENT                                                  &kp CARET       &kp AMPERSAND   &kp ASTERISK   &kp MINUS         &kp EQUAL     &kp BACKSLASH
-&kp LCTRL  &kp LS(LC(LG(A)))  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW   &kp COLON     &kp DOUBLE_QUOTES
-&kp LSHFT  &none              &none                 &none                  &none             &kp ESCAPE         &none           &none  &none  &none       &kp LA(LG(H))   &kp LA(LG(J))   &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &kp RIGHT_SHIFT
-                                                    &none                  &kp LALT          &kp LEFT_COMMAND   &kp LEFT_SHIFT  &none  &none  &kp RETURN  &none           &none           &none
+&kp GRAVE  &kp EXCLAMATION    &kp AT_SIGN  &kp HASH  &kp DOLLAR        &kp PERCENT                                                                 &kp CARET       &kp AMPERSAND   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp LCTRL  &kp LS(LC(LG(A)))  &none        &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW       &kp COLON              &kp DOUBLE_QUOTES
+&kp LSHFT  &none              &none        &none     &none             &kp ESCAPE         &kp LC(LA(LG(H)))  &kp LC(LA(LG(J)))  &none  &none       &kp MINUS       &kp EQUAL       &kp LESS_THAN  &kp GREATER_THAN      &kp QUESTION           &kp RIGHT_SHIFT
+                                           &none     &kp LALT          &kp LEFT_COMMAND   &kp LEFT_SHIFT     &none              &none  &kp RETURN  &none           &none           &none
             >;
 
             sensor-bindings =
@@ -199,10 +199,10 @@
 
         vim_layer {
             bindings = <
-&none      &vim_lbP  &vim_lbd   &vim_lrw  &vim_lcr  &vim_ltt                                      &vim_ty            &vim_tu            &vim_ti            &none              &vim_lcp  &none
-&kp LCTRL  &vim_lca  &kp LS(S)  &none     &vim_lfg  &vim_lgg                                      &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))  &kp LS(LC(LA(L)))  &none     &none
-&kp LSHFT  &none     &none      &none     &none     &kp ESCAPE  &none      &none  &none  &none    &kp LS(LA(LC(N)))  &kp LS(LA(LC(M)))  &none              &none              &none     &none
-                                &none     &kp LALT  &kp LGUI    &kp SPACE  &none  &none  &kp RET  &none              &none              &none
+&none      &vim_lbP  &vim_lbd   &vim_lrw  &vim_lcr  &vim_ltt                                                  &vim_ty            &vim_tu            &vim_ti            &none              &vim_lcp  &none
+&kp LCTRL  &vim_lca  &kp LS(S)  &none     &vim_lfg  &vim_lgg                                                  &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))  &kp LS(LC(LA(L)))  &none     &none
+&kp LSHFT  &none     &none      &none     &none     &kp ESCAPE  &none      &none              &none  &none    &kp LS(LA(LC(N)))  &kp LS(LA(LC(M)))  &none              &none              &none     &none
+                                &none     &kp LALT  &kp LGUI    &kp SPACE  &kp LS(LG(LA(R)))  &none  &kp RET  &none              &none              &none
             >;
         };
 
