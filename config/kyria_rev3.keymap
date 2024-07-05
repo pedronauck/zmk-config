@@ -63,6 +63,11 @@
             bindings = <&mo 1>;
             key-positions = <42 17>;
         };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
