@@ -48,6 +48,16 @@
             bindings = <&kp PIPE>;
             key-positions = <10 11>;
         };
+
+        homerow_h {
+            bindings = <&kp LC(LA(LG(H)))>;
+            key-positions = <16 18>;
+        };
+
+        homerow_j {
+            bindings = <&kp LC(LA(LG(J)))>;
+            key-positions = <16 19>;
+        };
     };
 
     macros {
@@ -99,6 +109,27 @@
             bindings = <&kp SPACE &kp C &kp A>;
             label = "VIM_LCA";
         };
+
+        leader_bd: leader_bd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp B &kp D>;
+            label = "LEADER_BD";
+        };
+
+        leader_bP: leader_bP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp B &kp LS(P)>;
+            label = "LEADER_BP";
+        };
+
+        leader_gg: leader_gg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp G &kp G>;
+            label = "LEADER_GG";
+        };
     };
 
     behaviors {
@@ -115,6 +146,15 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_2>, <&kp COMMA>;
 
+            mods = <(MOD_LSFT)>;
+        };
+
+        vim_fzf: vim_fzf {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_FZF";
+            bindings = <&leader_fg>, <&leader_sg>;
+
+            #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
     };
@@ -171,10 +211,10 @@
 
         vim_layer {
             bindings = <
-&none      &none       &none      &none  &leader_cr  &none                                                           &none              &leader_uh         &none              &none              &leader_cp  &none
-&kp LCTRL  &leader_ca  &none      &none  &leader_fg  &leader_sg                                                      &kp LC(LS(LA(H)))  &kp LC(LS(LA(J)))  &kp LC(LS(LA(K)))  &kp LC(LS(LA(L)))  &none       &none
-&kp LSHFT  &none       &shift_vc  &none  &none       &none       &none              &none              &none  &none  &none              &kp LC(LS(LA(M)))  &none              &none              &none       &none
-                                  &none  &none       &none       &kp LC(LA(LG(H)))  &kp LC(LA(LG(J)))  &none  &none  &none              &none              &none
+&none      &leader_bP  &leader_bd  &none  &leader_cr  &none                                            &none              &leader_uh         &none              &none              &leader_cp  &none
+&kp LCTRL  &leader_ca  &none       &none  &vim_fzf    &leader_gg                                       &kp LC(LS(LA(H)))  &kp LC(LS(LA(J)))  &kp LC(LS(LA(K)))  &kp LC(LS(LA(L)))  &none       &none
+&kp LSHFT  &none       &shift_vc   &none  &none       &none       &none           &none  &none  &none  &none              &kp LC(LS(LA(M)))  &none              &none              &none       &none
+                                   &none  &none       &none       &kp LEFT_SHIFT  &none  &none  &none  &none              &none              &none
             >;
         };
 
