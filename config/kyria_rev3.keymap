@@ -58,6 +58,11 @@
             bindings = <&kp LC(LA(LG(J)))>;
             key-positions = <16 19>;
         };
+
+        layer_1 {
+            bindings = <&mo 1>;
+            key-positions = <42 17>;
+        };
     };
 
     macros {
