@@ -19,29 +19,9 @@
         compatible = "zmk,combos";
 
         layer_2 {
-            bindings = <&tog 2>;
+            bindings = <&mo 2>;
             key-positions = <16 17>;
             layers = <0 2>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-        };
-
-        layer_1 {
-            bindings = <&mo 1>;
-            key-positions = <28 29>;
-        };
-
-        homerow_h {
-            bindings = <&kp LC(LA(LG(H)))>;
-            key-positions = <18 19>;
-        };
-
-        homerow_j {
-            bindings = <&kp LC(LA(LG(J)))>;
-            key-positions = <19 20>;
         };
 
         reload_vim {
