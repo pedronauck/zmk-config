@@ -18,107 +18,106 @@
     combos {
         compatible = "zmk,combos";
 
-        fg {
+        layer_2 {
             bindings = <&tog 2>;
             key-positions = <16 17>;
             layers = <0 2>;
         };
 
-        qw {
+        esc {
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
         };
 
-        vb {
+        layer_1 {
             bindings = <&mo 1>;
             key-positions = <28 29>;
         };
 
-        hj {
+        homerow_h {
             bindings = <&kp LC(LA(LG(H)))>;
             key-positions = <18 19>;
         };
 
-        jk {
+        homerow_j {
             bindings = <&kp LC(LA(LG(J)))>;
             key-positions = <19 20>;
         };
 
-        rt {
+        reload_vim {
             bindings = <&kp LS(LA(R))>;
             key-positions = <4 5>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <34 35>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <35 36>;
+        };
+
+        dquote {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <22 23>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <10 11>;
         };
     };
 
     macros {
-        vim_lsg: vim_lgg {
+        leader_sg: vim_lgg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp S &kp G>;
             label = "VIM_LGG";
         };
 
-        vim_svc: vim_lcs {
+        shift_vc: vim_lcs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(C) &kp S>;
+            bindings = <&kp LS(V) &kp C>;
             label = "VIM_LCS";
         };
 
-        vim_uh: vim_tu {
+        leader_uh: vim_tu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp U &kp H>;
             label = "VIM_TU";
         };
 
-        vim_lcp: vim_lcp {
+        leader_cp: vim_lcp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp C &kp P>;
             label = "VIM_LCP";
         };
 
-        vim_lbd: vim_lbd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &kp B &kp D>;
-            label = "VIM_LBD";
-        };
-
-        vim_lbP: vim_lbP {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &kp B &kp LS(P)>;
-            label = "VIM_LBP";
-        };
-
-        vim_lfg: vim_lfb {
+        leader_fg: vim_lfb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp F &kp G>;
             label = "VIM_LFB";
         };
 
-        vim_lcr: vim_lcr {
+        leader_cr: vim_lcr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp C &kp R>;
             label = "VIM_LCR";
         };
 
-        vim_lca: vim_lca {
+        leader_ca: vim_lca {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp C &kp A>;
             label = "VIM_LCA";
-        };
-
-        vim_lt: vim_lt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &kp T>;
-            label = "VIM_LT";
         };
     };
 
@@ -151,10 +150,10 @@
             //                     | CTRL  | ALT  | CMD  |  SPACE  |   BSPC   |  |   RET   |  SPACE  | RET  | BSPC  | R-ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E  &kp R     &kp T                                             &kp Y  &kp U  &kp I      &kp O       &kp P          &kp LA(BACKSPACE)
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F     &kp G                                             &kp H  &kp J  &kp K      &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V     &kp B     &none      &none     &none  &none       &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
-                                &mo 2  &kp LALT  &kp LGUI  &kp SPACE  &kp BSPC  &mo 3  &kp RETURN  &mo 1  &none  &none
+&kp TAB           &kp Q  &kp W  &kp E  &kp R     &kp T                                             &kp Y  &kp U          &kp I      &kp O       &kp P          &kp LA(BACKSPACE)
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F     &kp G                                             &kp H  &kp J          &kp K      &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V     &kp B     &none      &none     &none  &none       &kp N  &kp M          &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
+                                &mo 2  &kp LALT  &kp LGUI  &kp SPACE  &kp BSPC  &mo 3  &kp RETURN  &mo 1  &kp LA(SPACE)  &none
             >;
 
             sensor-bindings =
@@ -192,19 +191,10 @@
 
         vim_layer {
             bindings = <
-&none      &none     &vim_lbd   &none  &vim_lcr  &vim_lt                                       &none  &vim_uh  &none  &none  &vim_lcp  &none
-&kp LCTRL  &vim_lca  &kp LS(S)  &none  &vim_lfg  &vim_lsg                                      &none  &none    &none  &none  &none     &none
-&kp LSHFT  &none     &none      &none  &none     &kp ESCAPE  &none      &none  &none  &none    &none  &none    &none  &none  &none     &none
-                                &none  &kp LALT  &kp LGUI    &kp SPACE  &none  &none  &kp RET  &none  &none    &none
-            >;
-        };
-
-        vim_layer2 {
-            bindings = <
-&none      &vim_lbP  &vim_lbd   &none  &vim_lcr  &vim_ltt                                      &vim_ty            &vim_uh            &vim_ti            &none              &vim_lcp  &none
-&kp LCTRL  &vim_lca  &kp LS(S)  &none  &vim_lfg  &vim_lsg                                      &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))  &kp LS(LC(LA(L)))  &none     &none
-&kp LSHFT  &none     &none      &none  &none     &kp ESCAPE  &none      &none  &none  &none    &kp LS(LA(LC(N)))  &kp LS(LA(LC(M)))  &none              &none              &none     &none
-                                &none  &kp LALT  &kp LGUI    &kp SPACE  &none  &none  &kp RET  &none              &none              &none
+&none      &none       &none      &none  &leader_cr  &none                                   &none              &leader_uh         &none              &none              &leader_cp  &none
+&kp LCTRL  &leader_ca  &none      &none  &leader_fg  &leader_sg                              &kp LC(LS(LA(H)))  &kp LC(LS(LA(J)))  &kp LC(LS(LA(K)))  &kp LC(LS(LA(L)))  &none       &none
+&kp LSHFT  &none       &shift_vc  &none  &none       &none       &none  &none  &none  &none  &none              &kp LC(LS(LA(M)))  &none              &none              &none       &none
+                                  &none  &none       &none       &none  &none  &none  &none  &none              &none              &none
             >;
         };
 
