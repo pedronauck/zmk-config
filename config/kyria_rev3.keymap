@@ -191,10 +191,10 @@
 
         vim_layer {
             bindings = <
-&none      &none       &none      &none  &leader_cr  &none                                   &none              &leader_uh         &none              &none              &leader_cp  &none
-&kp LCTRL  &leader_ca  &none      &none  &leader_fg  &leader_sg                              &kp LC(LS(LA(H)))  &kp LC(LS(LA(J)))  &kp LC(LS(LA(K)))  &kp LC(LS(LA(L)))  &none       &none
-&kp LSHFT  &none       &shift_vc  &none  &none       &none       &none  &none  &none  &none  &none              &kp LC(LS(LA(M)))  &none              &none              &none       &none
-                                  &none  &none       &none       &none  &none  &none  &none  &none              &none              &none
+&none      &none       &none      &none  &leader_cr  &none                                                           &none              &leader_uh         &none              &none              &leader_cp  &none
+&kp LCTRL  &leader_ca  &none      &none  &leader_fg  &leader_sg                                                      &kp LC(LS(LA(H)))  &kp LC(LS(LA(J)))  &kp LC(LS(LA(K)))  &kp LC(LS(LA(L)))  &none       &none
+&kp LSHFT  &none       &shift_vc  &none  &none       &none       &none              &none              &none  &none  &none              &kp LC(LS(LA(M)))  &none              &none              &none       &none
+                                  &none  &none       &none       &kp LC(LA(LG(H)))  &kp LC(LA(LG(J)))  &none  &none  &none              &none              &none
             >;
         };
 
