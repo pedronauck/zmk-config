@@ -124,6 +124,13 @@
             bindings = <&kp SPACE &kp G &kp G>;
             label = "LEADER_GG";
         };
+
+        leader_wq: leader_wq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp W &kp Q>;
+            label = "LEADER_WQ";
+        };
     };
 
     behaviors {
@@ -151,6 +158,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        vim_cbuff: vim_cbuff {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_CBUFF";
+            bindings = <&leader_bd>, <&leader_bP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     keymap {
@@ -166,7 +182,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E  &kp R     &kp T                                           &kp Y  &kp U  &kp I      &kp O       &kp P          &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F     &lt 2 G                                         &kp H  &kp J  &kp K      &kp L       &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V     &lt 1 B   &none      &none  &none  &none        &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &lt 1 V   &kp B     &none      &none  &none  &none        &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
                                 &none  &kp LALT  &kp LGUI  &kp SPACE  &none  &none  &lt 3 ENTER  &mo 1  &mo 2  &none
             >;
 
@@ -205,7 +221,7 @@
 
         vim_layer {
             bindings = <
-&none      &leader_bP  &leader_bd  &none  &leader_cr  &none                                            &none              &leader_uh         &none              &none              &leader_cp  &none
+&none      &leader_wq  &vim_cbuff  &none  &leader_cr  &none                                            &none              &leader_uh         &none              &none              &leader_cp  &none
 &kp LCTRL  &leader_ca  &none       &none  &vim_fzf    &leader_gg                                       &kp LC(LS(LA(H)))  &kp LC(LS(LA(J)))  &kp LC(LS(LA(K)))  &kp LC(LS(LA(L)))  &none       &none
 &kp LSHFT  &none       &none       &none  &none       &kp ESCAPE  &none           &none  &none  &none  &kp LC(LA(LG(H)))  &kp LC(LS(LA(M)))  &kp LC(LA(LG(J)))  &none              &none       &none
                                    &none  &none       &none       &kp LEFT_SHIFT  &none  &none  &none  &none              &none              &none
