@@ -57,11 +57,6 @@
             bindings = <&mo 2>;
             key-positions = <46 47>;
         };
-
-        alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <24 41>;
-        };
     };
 
     macros {
